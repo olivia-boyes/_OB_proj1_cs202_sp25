@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class GlobeRect:
-    low_lat: float
+    lo_lat: float
     hi_lat: float
     west_long: float
     east_long: float
@@ -61,7 +61,7 @@ def area(gr: GlobeRect) -> float:
 
     lambda_1 = gr.west_long * radian_conversion
     lambda_2 = gr.east_long * radian_conversion
-    psi_1 = gr.low_lat * radian_conversion
+    psi_1 = gr.lo_lat * radian_conversion
     psi_2 = gr.hi_lat * radian_conversion
 
     delta_lambda = lambda_2 - lambda_1
